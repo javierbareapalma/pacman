@@ -4,7 +4,14 @@ kind: Kustomization
 
 namespace: pacmanpvc200
 
-patchesStrategicMerge:
-- mongo-pvc.yaml
+#patchesStrategicMerge:
+#- mongo-pvc.yaml
+
+patches:
+- path: pvc-patch.yaml
+  target:
+    kind: PersistentVolumeClaim
+    name: mongo-storage
+
 resources:
 - ../../base
