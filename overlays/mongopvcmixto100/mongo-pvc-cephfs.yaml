@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mongo-storage-cephfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ocs-storagecluster-cephfs
+  resources:
+    requests:
+      storage: 100Gi
