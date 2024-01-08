@@ -8,8 +8,5 @@ resources:
 patches:
 - path: pvc-patch.yaml
   target:
-    kind: storageClassName
-    name: ocs-storagecluster-ceph-rbd
-  target:
     kind: PersistentVolumeClaim
     name: mongo-storage
